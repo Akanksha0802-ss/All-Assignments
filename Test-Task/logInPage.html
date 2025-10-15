@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page</title>
+    <style>
+        .container{
+            height: 100vh;
+            background-color: rgb(174, 118, 226);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            background-color: beige;
+            height: 400px;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .item{
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             padding: 10px;
+        }
+
+        .logIn{
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            margin: 2px;
+            border: none;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        .btn{
+            background-color: aqua;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="parent">
+         <div class="logIn">
+            <h2>Login</h2>
+         </div>
+            <div class="item">
+              <label>Usename</label>
+              <input type="text" id="" class="" placeholder="Enter your username">
+            </div>
+            <div class="item">
+               <label>Password</label>
+               <input type="password" id="" class="" placeholder="Enter your password">
+            </div>
+            <div class="item">
+                <button type="submit" class="btn">Login</button>
+            </div>
+            <div class="item">
+                <p>Don't have an account?<a href="registerPage.html">Register</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterPage</title>
+    <style>
+        .container{
+            height: 100vh;
+            background-color: rgb(171, 98, 240);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            background-color: beige;
+            height: 400px;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+
+
+        }
+
+        .item{
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             padding: 10px;
+        }
+
+        .logIn{
+            text-align: center;
+
+        }
+
+        input {
+            padding: 8px;
+            margin: 2px;
+            border: none;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        .btn{
+            background-color: rgb(104, 161, 241);
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <div class="logIn">
+                <h2>Register</h2>
+            </div>
+            <div class="item">
+            <label>Usename</label>
+            <input type="text" id="" class="" placeholder="Choose a username">
+            </div>
+            <div class="item">
+             <label>Email</label>
+            <input type="text" id="" class="" placeholder="Enter your email">
+            </div>
+             <div class="item">
+             <label>Password</label>
+            <input type="password" id="" class="" placeholder="Enter your password">
+            </div>
+            <div class="item">
+                <button type="submit" class="btn">Register</button>
+            </div>
+
+            <div class="item">
+                <p>Already have an account?<a href="logInPage.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
