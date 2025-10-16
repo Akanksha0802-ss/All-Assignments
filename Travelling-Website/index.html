@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-Website</title>
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-section {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 20px 50px;
+        }
+
+        .logo-section{
+            /* height: 50px;
+            width: 50px;
+            border-radius: 50%; */
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border: 2px solid white;
+        }
+
+        .logo-section img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-section h1 {
+            color: #FF9933;
+        }
+
+        ul {
+            /* background-color: beige; */
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            font-size: 30px;
+            border: 2px solid black;
+        }
+
+        a {
+            color: black;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* hero-section */
+        #home {
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(1px);
+        }
+
+        .heading-tagline{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           height: 100px;
+           /* background-color: red; */
+        }
+
+        .heading-tagline h1 {
+            font-size: 100px;
+        }
+
+        .heading-tagline p {
+            font-size: 20px;
+
+        }
+
+        button {
+            color: white;
+            background-color: #003366;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* destination-section */
+         .destination-header {
+            background-color: rgb(239, 238, 236);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .destination-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 600px 600px;
+            gap: 2rem;
+            /* column-gap: 10rem; */
+            /* row-gap: 3rem; */
+            background-color: rgb(231, 231, 242);
+        }
+
+           .destination-card{
+            background-color: #f3dac1;
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .destination-card {
+            /* width: 100%; */
+            /* width: 33%; */
+            /* border: 1px solid black; */
+            border-radius: 5px;
+            padding: 10px;
+            
+        }
+        img{
+            width: 100%;
+            /* padding: 30px; */
+            border-radius: 10px;
+
+        }
+
+       .title-desc{
+            /* color: #FF9933; */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            align-items: center;
+            padding: 10px;
+        }
+
+        .title-desc h3 {
+            color: #FF9933;
+            /* font-style: italic; */
+            margin-bottom: 2px;
+        }
+
+       .title-desc p {
+            color: #333333;
+            font-size: 20px;
+            text-align: center;
+            /* padding: 5px; */
+            font-style: italic;
+        }
+
+        /* Testimonial-section */
+         .testimonial-header{
+            background-color: rgb(241, 230, 216);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .testimonial-container {
+            /* background-color: red; */
+            height: 450px;
+            width: 100vw;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            background-color: #efe0bd;
+        }
+
+        .testimonial-card {
+            width: 400px;
+            background-color: #d4d0d0cf;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            /* box-shadow: 10px 5px 5px #f4f4f4; */
+
+        }
+
+        .testimonial-card img {
+            /* height: 10rem; */
+            height: 100px;
+            width: 100px;
+
+            /* border-radius: 50%; */
+            /* border-radius: 100%; */
+            /* /* padding: 10px; */
+            border-radius: 10px;
+            border: 1px solid black; 
+        }
+
+        .testimonial-item {
+            padding: 10px;
+            /* margin: 20px; */
+        }
+
+        .testimonial-item p {
+            color: #333333;
+            padding-top: 10px;
+    
+        }
+
+        .testimonial-item h3{
+            /* background-color: red; */
+            color: #138808;
+            /* padding: 10px; */
+        }
+        
+        .testimonial-item p {
+            font-size: 20px;
+            font-weight: lighter;
+        }
+
+        /* footer-section */
+       .footer-section {
+        background-color: #2e2e2e;
+        color: lightgray;
+        display: flex;
+        justify-content: space-evenly;
+       }
+
+       .footer-item {
+        padding: 25px;
+        margin: 10px;
+        }
+
+       .footer-item h3{
+        font-size: larger;
+        font-weight: bold;
+       }
+
+       ul li {
+        list-style: none;
+       }
+
+       ul li a {
+        color: beige;
+        text-decoration: none;
+       }
+
+       .para {
+        text-align: center;
+        padding: 10px;
+       }
+    </style>
+</head>
+<body>
+
+    <header class="header-section">
+        <div class="logo-section">
+            <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/travel-logo-design.jpg" alt="logo" height="50px"> 
+            <h1>Explore Bharat</h1>
+        </div>   
+        <nav>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Footer</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+        <div class="hero">
+           <div class="heading-tagline">
+            <h1>Welcome to Explore Bharat!</h1>
+            <!-- <h1 class="hero-heading">Discover Incredible India!</h1> -->
+            <p>From culture to cuisine exlore the beauty of Bharat</p>
+            <button>Explore Now</button>
+           </div>
+        </div>
+        </section>
+
+        <section id="destination">
+            <div class="destination-header">
+        <h2>Explore Bharat Really Shine!</h2>
+    </div>
+    <div class="destination-container">
+       <div class="destination-card">
+            <div class="card">
+                <img src="https://wallpaperaccess.com/full/2714802.jpg" alt="img">
+                <div class="title-desc">
+                    <h3>Varanasi, Uttar Pradesh</h3>
+                    <p>Experience the spiritual heart of India — the holy Ganga Aarti and timeless ghats of Varanasi."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <div class="card">
+               <img src="https://tse2.mm.bing.net/th/id/OIP.I0ppddp-eeVa-I3jdikRyQHaFj?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="img">
+               <div class="title-desc">
+                  <h3>Agra, Uttar Pradesh</h3>
+                  <p>"Home of the Taj Mahal — the eternal symbol of love and Mughal grandeur."</p>
+                </div>
+             </div>
+        </div>
+
+    <div class="destination-card">
+          <div class="card">
+             <img src="https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2015/08/trekking-in-ladakh.jpg" alt="img">
+               <div class="title-desc">
+                <h3>Ladakh, Jammu & Kashmir</h3>
+                <p>"Snow-capped mountains, blue lakes, and Buddhist monasteries — adventure meets serenity in Ladakh."</p>
+                </div>
+            </div>
+        </div>
+    
+
+    <div class="destination-card">
+        <div class="card">
+           <img src="https://wallpapercave.com/wp/wp2783293.jpg" alt="img">
+           <div class="title-desc">
+              <h3>Kerala, God's Own Country</h3>
+              <p>"Peaceful backwaters, lush green hills, and coconut-lined beaches — Kerala is pure natural bliss."</p>
+           </div>
+        </div>
+    </div>
+
+    <div class="destination-card">
+          <div class="card">
+           <img src="https://www.exploredehradun.in/images/dehradun/dehradun-landscape.webp" alt="img">
+            <div class="title-desc">
+                <h3>Dehradun, Uttarakhand</h3>
+                <p>"Dehradun, the capital of Uttarakhand, is a picturesque city nestled in the Doon Valley at the foothills of the Himalayas, known for its rich history, educational institutions, and scenic beauty."</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="destination-card">
+        <div class="card">
+           <img src="https://miro.medium.com/max/3200/1*idBbkSkH4nXVIhDbA5QBEw.jpeg" alt="img">
+           <div class="title-desc">
+              <h3>Jaipur, Rajasthan</h3>
+              <p>"The Pink City of India — known for its royal palaces, colorful bazaars, and majestic forts like Amber and Nahargarh."</p>
+            </div>
+        </div>
+    </div>
+ </div>
+</section>
+        <section id="testimonial">
+         <div class="testimonial-header">
+        <h2>What Our Travelers Say:-</h2>
+    </div>
+    <div class="testimonial-container">
+        
+        <div class="testimonial-card">
+            <div class="testimonial-item">
+                <img src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-74738.jpg" alt="img" height="100px" width="200px">
+            </div>
+            <div class="testimonial-item">
+                <p>"Explore Bharat helped me discover hidden gems in Kerala. The experience was magical!"</p>
+            </div>
+            <div class="testimonial-item">
+                <h3>Riya Singh - Varanasi</h3>
+            </div>
+            <div class="testimonial-item">
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-item">
+                <img src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-74738.jpg" alt="img" height="100px" width="200px">
+            </div>
+            <div class="testimonial-item">
+                <p>"Best travel experience ever! The Explore Bharat team was so supportive!"</p>
+            </div>
+            <div class="testimonial-item">
+                <h3>Sneha Patel - Ahmedabad</h3>
+            </div>
+            <div class="testimonial-item">
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-item">
+                <img src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-74738.jpg" alt="img" height="100px" width="200px">
+            </div>
+            <div class="testimonial-item">
+                <p>"Loved the trip to Ladakh! Beautiful planning and excellent service!"</p>
+            </div>
+            <div class="testimonial-item">
+                <h3>Ankita Rajput - Mumbai</h3>
+            </div>
+            <div class="testimonial-item">
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+            </div>
+        </div>
+    </div>
+      
+        <!-- <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div> -->
+    </div>
+    </section>
+</main>
+
+    <footer id="footer">
+        <div class="footer-section">
+            <div class="footer-item">
+                <h3>Explore Bharat</h3>
+                <p>Discover India's hidden beauty, culture, and adeventure through Explore Bharat</p>
+            </div>
+            <div class="footer-item">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>Contact with us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <p class="para">©2025 Explore Bharat - All Rights Reserved</p>
+    </footer>
+    
+
+    
+</body>
+</html>
